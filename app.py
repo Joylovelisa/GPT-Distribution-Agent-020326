@@ -676,7 +676,7 @@ def standardize_distribution_df(df: pd.DataFrame) -> Tuple[pd.DataFrame, str]:
 
 
 def df_to_json_records(df: pd.DataFrame) -> str:
-    return json.dumps(df.to_dict(orient="records"), ensure_ascii=False, indent=2)
+    return json.dumps(df.to_dict(orient="records"), ensure_ascii=False, indent=2, default=str)
 
 
 # ============================================================
@@ -1172,7 +1172,7 @@ def llm_standardize_agents_yaml(raw_yaml: str, provider: str, model: str, api_ke
 
 SCHEMA (example):
 ```json
-{json.dumps(schema, ensure_ascii=False, indent=2)}
+{json.dumps(schema, ensure_ascii=False, indent=2, default=str)}
 ```
 
 INPUT YAML:
@@ -2066,7 +2066,7 @@ def page_agents():
         summary = compute_summary(df)
         sample = df.head(20).to_csv(index=False)
         base_context = f"""DATASET SUMMARY (JSON):
-{json.dumps(summary, ensure_ascii=False, indent=2)}
+{json.dumps(summary, ensure_ascii=False, indent=2, default=str)}
 
 USER INSTRUCTIONS (optional):
 {st.session_state.get('viz_instructions','')}
@@ -2508,10 +2508,10 @@ def compare_two_datasets_page():
 ---
 
 ### A 摘要（JSON）
-{json.dumps(sA, ensure_ascii=False, indent=2)}
+{json.dumps(sA, ensure_ascii=False, indent=2, default=str)}
 
 ### B 摘要（JSON）
-{json.dumps(sB, ensure_ascii=False, indent=2)}
+{json.dumps(sB, ensure_ascii=False, indent=2, default=str)}
 
 ### A 樣本（前 20 筆 CSV）
 {sampleA}
