@@ -1,0 +1,14 @@
+streamlit
+pandas
+pydantic
+PyPDF2
+rapidfuzz
+pyyaml
+pdf2image
+pytesseract
+Pillow
+openai
+google-generativeai
+anthropic
+markdown-it-py
+beautifulsoup4
