@@ -16,3 +16,4 @@ beautifulsoup4
 PyYAML
 rapidfuzz
 plotly
+streamlit-plotly-events
