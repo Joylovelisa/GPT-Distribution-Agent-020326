@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "name": "default_distribution_dataset",
+  "records": [
+    {
+      "SupplierID": "B00079",
+      "Deliverdate": 20251107,
+      "CustomerID": "C05278",
+      "LicenseNo": "衛部醫器輸字第033951號",
+      "Category": "E.3610植入式心律器之脈搏產生器",
+      "UDID": "00802526576331",
+      "DeviceNAME": "「波士頓科技」英吉尼心臟節律器",
+      "LotNO": "890057",
+      "SerNo": "",
+      "Model": "L111",
+      "Number": 1
+    },
+    {
+      "SupplierID": "B00079",
+      "Deliverdate": 20251106,
+      "CustomerID": "C06030",
+      "LicenseNo": "衛部醫器輸字第033951號",
+      "Category": "E.3610植入式心律器之脈搏產生器",
+      "UDID": "00802526576331",
+      "DeviceNAME": "「波士頓科技」英吉尼心臟節律器",
+      "LotNO": "872177",
+      "SerNo": "",
+      "Model": "L111",
+      "Number": 1
+    }
+  ]
+}
+```
+
+### Option B: store as CSV string (compact, but CSV quoting must be correct)
+```json
+{
+  "version": "1.0",
+  "name": "default_distribution_dataset",
+  "format": "csv",
+  "data": "SupplierID,Deliverdate,CustomerID,LicenseNo,Category,UDID,DeviceNAME,LotNO,SerNo,Model,Number\nB00079,20251107,C05278,衛部醫器輸字第033951號,E.3610植入式心律器之脈搏產生器,00802526576331,\"波士頓科技 英吉尼心臟節律器\",890057,,L111,1\n"
+}
